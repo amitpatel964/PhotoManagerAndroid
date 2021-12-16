@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DisplayPhotoViewer"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/displayImageView"
+            android:layout_width="360dp"
+            android:layout_height="233dp"
+            tools:srcCompat="@tools:sample/avatars" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/backToPhotoListButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/back"
+            tools:layout_editor_absoluteX="21dp"
+            tools:layout_editor_absoluteY="259dp"
+            android:layout_marginEnd="5dp"/>
+
+        <Button
+            android:id="@+id/slideshowDisplayButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/slideshow"
+            tools:layout_editor_absoluteX="112dp"
+            tools:layout_editor_absoluteY="259dp"
+            android:layout_marginEnd="5dp"/>
+
+        <Button
+            android:id="@+id/displayPhotoButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/remove_tag"
+            tools:layout_editor_absoluteX="217dp"
+            tools:layout_editor_absoluteY="211dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Spinner
+            android:id="@+id/tagTypeSpinner"
+            android:layout_width="138dp"
+            android:layout_height="46dp"
+            tools:layout_editor_absoluteY="323dp" />
+
+        <Button
+            android:id="@+id/addTagButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_tag"
+            tools:layout_editor_absoluteX="112dp"
+            tools:layout_editor_absoluteY="259dp"
+            android:layout_marginEnd="5dp"/>
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/tagValueEditText"
+        android:layout_width="214dp"
+        android:layout_height="49dp"
+        tools:layout_editor_absoluteX="147dp"
+        tools:layout_editor_absoluteY="323dp"
+        android:autofillHints="Tag Type" />
+
+    <TextView
+        android:id="@+id/tagTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tags_of_photo"
+        tools:layout_editor_absoluteX="140dp"
+        tools:layout_editor_absoluteY="388dp" />
+
+    <ListView
+        android:id="@+id/tagsListView"
+        android:layout_width="350dp"
+        android:layout_height="110dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="455dp" />
+
+</LinearLayout>
